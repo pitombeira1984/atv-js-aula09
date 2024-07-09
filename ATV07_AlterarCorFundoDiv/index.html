@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interação Dinâmica com Mouseover</title>
+    <style>
+.box {
+    width: 200px;
+    height: 200px;
+    background-color: #3498db; /* Cor original */
+    transition: background-color 0.5s ease; /* Transição suave */
+}
+
+.box:hover {
+    background-color: #e74c3c; /* Cor ao passar o mouse */
+}
+
+    </style>
+</head>
+<body>
+    <div id="colorBox" class="box"></div>
+    <script>
+document.addEventListener("DOMContentLoaded", function() {
+    var colorBox = document.getElementById("colorBox");
+
+    colorBox.addEventListener("mouseover", function() {
+        colorBox.style.backgroundColor = "#e74c3c"; // Cor ao passar o mouse
+    });
+
+    colorBox.addEventListener("mouseout", function() {
+        colorBox.style.backgroundColor = "#3498db"; // Cor original
+    });
+});
+
+    </script>
+</body>
+</html>

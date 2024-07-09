@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu de Navegação</title>
+    <style>
+#menu {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu-item {
+    padding: 10px;
+    cursor: pointer;
+}
+
+/* Estilos para o estado destacado */
+.menu-item.highlight {
+    font-weight: bold;
+    background-color: #f0f0f0;
+}
+
+    </style>
+</head>
+<body>
+    <nav>
+        <ul id="menu">
+            <li class="menu-item">Home</li>
+            <li class="menu-item">Sobre</li>
+            <li class="menu-item">Serviços</li>
+            <li class="menu-item">Contato</li>
+        </ul>
+    </nav>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const menuItems = document.querySelectorAll('.menu-item');
+        
+            menuItems.forEach(item => {
+                item.addEventListener('mouseover', () => {
+                    item.classList.add('highlight');
+                });
+        
+                item.addEventListener('mouseout', () => {
+                    item.classList.remove('highlight');
+                });
+            });
+        });
+        
+    </script>
+</body>
+</html>

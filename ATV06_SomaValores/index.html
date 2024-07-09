@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" name="inputValorA" id="inputValorA">
+    <input type="number" name="inputValorB" id="inputValorB">
+    <button id="calculo">calculo</button>
+    <p id="mensagem"></p>
+    <script>
+        const botao = document.getElementById('calculo');
+        const resultado = document.getElementById('mensagem');
+        
+        botao.addEventListener('click', (event) => {
+            const var1 = parseFloat(document.getElementById('inputValorA').value);
+            const var2 = parseFloat(document.getElementById('inputValorB').value);
+            const botaoCalculo = var1 + var2;
+            console.log(event);
+            resultado.textContent = botaoCalculo; 
+        });
+    </script>
+</body>
+</html>

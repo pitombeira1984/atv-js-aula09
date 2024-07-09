@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parágrafo Personalizado</title>
+</head>
+<body>
+    <div class="container">
+        <button id="button" onclick="criar()">Crie um Parágrafo</button>
+    </div>
+    <script>
+        function criar(){
+            const container = document.querySelector('.container'); // Seleciona o container corretamente
+            const filho1 = document.createElement('p'); // Cria o parágrafo
+            filho1.textContent = 'Este é um novo parágrafo'; // Adiciona texto ao parágrafo
+            container.appendChild(filho1); // Adiciona o parágrafo ao container
+            filho1.style.color = 'blue';
+            filho1.style.background = '#f00'
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo de Mouseover</title>
+    <style>
+        #lampada {
+            width: 200px;
+            height: auto;
+            transition: transform 0.3s; /* Adiciona uma transição suave */
+        }
+        
+        #lampada:hover {
+            transform: scale(1.1); /* Aumenta a escala da imagem ao passar o mouse */
+        }
+        
+    </style>
+</head>
+<body>
+    <img id="lampada" src="lampada.jpg" alt="Lâmpada">
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const lampada = document.getElementById('lampada');
+        
+            lampada.addEventListener('mouseover', function() {
+                lampada.src = 'lampada-on.jpg';
+            });
+        
+            lampada.addEventListener('mouseout', function() {
+                lampada.src = 'lampada.jpg';
+            });
+        });
+        
+    </script>
+</body>
+</html>

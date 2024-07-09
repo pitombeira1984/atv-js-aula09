@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de Citações</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        
+        .quote-container {
+            text-align: center;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        #quote {
+            font-size: 1.5em;
+            margin-bottom: 20px;
+        }
+        
+        button {
+            padding: 10px 20px;
+            font-size: 1em;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            background-color: #007BFF;
+            color: white;
+            transition: background-color 0.3s;
+        }
+        
+        button:hover {
+            background-color: #0056b3;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="quote-container">
+        <p id="quote"></p>
+        <button onclick="generateQuote()">Gerar Citação</button>
+    </div>
+    <script>
+        const quotes = [
+    "A vida é o que acontece quando você está ocupado fazendo outros planos. - John Lennon",
+    "O maior erro que você pode cometer é o de ficar o tempo todo com medo de cometer algum. - Elbert Hubbard",
+    "Em três palavras eu posso resumir tudo que aprendi sobre a vida: a vida continua. - Robert Frost",
+    "A melhor maneira de prever o futuro é inventá-lo. - Alan Kay",
+    "O sucesso é ir de fracasso em fracasso sem perder entusiasmo. - Winston Churchill"
+];
+
+const colors = ["#FF5733", "#33FF57", "#3357FF", "#F333FF", "#FF33A1"];
+
+function generateQuote() {
+    const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
+    const randomColor = colors[Math.floor(Math.random() * colors.length)];
+    document.getElementById('quote').innerText = randomQuote;
+    document.getElementById('quote').style.color = randomColor;
+}
+
+    </script>
+</body>
+</html>
